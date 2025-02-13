@@ -24,3 +24,10 @@
 .main {
   padding: 30px;
 } 
+@media (max-width: 976px) {
+  .main {
+    padding: 0;
+  }
+}
+
+

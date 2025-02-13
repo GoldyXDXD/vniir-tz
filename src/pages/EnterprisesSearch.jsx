@@ -27,16 +27,16 @@ export const EnterprisesSearch = () => {
       <Breadcrumb />
       <h1 className={styles.title}>ПОИСК ПРЕДПРИЯТИЙ</h1>
       <div className={styles.content}>
-        <div className={styles.left}>
-        <Filters
-          regions={regions}
-          filters={filters}
-          setFilters={setFilters}
-          salaryRange={salaryRange}
-          onReset={resetFilters}
-        />
-        </div>
         
+          <Filters
+            regions={regions}
+            filters={filters}
+            setFilters={setFilters}
+            salaryRange={salaryRange}
+            onReset={resetFilters}
+          />
+       
+
         <div className={styles.mainContent}>
           <Statistics statistics={statistics} />
           <CompanySearch

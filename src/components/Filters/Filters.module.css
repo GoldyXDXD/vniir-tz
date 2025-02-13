@@ -1,5 +1,6 @@
 .filters {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   padding: 20px 20px 250px 20px;
   border-radius: 8px;
   height: min-content;
@@ -123,4 +124,11 @@ h2.title {
 
 .rangeSlider::-moz-range-thumb:active {
   transform: scale(1.2);
+}
+
+@media (max-width: 976px) {
+  .filters {
+    max-width: calc(100% - 40px);
+    padding-bottom: 20px;
+  }
 }

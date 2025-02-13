@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './PieChart.module.css';
 
 const COLORS = {
@@ -8,7 +8,20 @@ const COLORS = {
 };
 
 export const PieChart = ({ ownershipStats }) => {
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
   const hasCompanies = Object.values(ownershipStats).some(value => value > 0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const radius = isSmallScreen ? 100 : 175;
+  const center = radius;
 
   // Корректируем проценты для диаграммы, чтобы сумма была 100%
   const adjustedPercentages = React.useMemo(() => {
@@ -32,8 +45,7 @@ export const PieChart = ({ ownershipStats }) => {
 
   const createPieChartPath = (startAngle, percentage) => {
     if (percentage === 100) {
-      // Для случая со 100% рисуем полный круг
-      return `M175,175 m-175,0 a175,175 0 1,1 350,0 a175,175 0 1,1 -350,0`;
+      return `M${center},${center} m-${radius},0 a${radius},${radius} 0 1,1 ${radius * 2},0 a${radius},${radius} 0 1,1 -${radius * 2},0`;
     }
 
     const angle = (percentage / 100) * 360;
@@ -42,14 +54,14 @@ export const PieChart = ({ ownershipStats }) => {
     const startRadians = (startAngle - 90) * (Math.PI / 180);
     const endRadians = (endAngle - 90) * (Math.PI / 180);
 
-    const x1 = 175 + 175 * Math.cos(startRadians);
-    const y1 = 175 + 175 * Math.sin(startRadians);
-    const x2 = 175 + 175 * Math.cos(endRadians);
-    const y2 = 175 + 175 * Math.sin(endRadians);
+    const x1 = center + radius * Math.cos(startRadians);
+    const y1 = center + radius * Math.sin(startRadians);
+    const x2 = center + radius * Math.cos(endRadians);
+    const y2 = center + radius * Math.sin(endRadians);
 
     const largeArc = angle > 180 ? 1 : 0;
 
-    return `M175,175 L${x1},${y1} A175,175 0 ${largeArc},1 ${x2},${y2} Z`;
+    return `M${center},${center} L${x1},${y1} A${radius},${radius} 0 ${largeArc},1 ${x2},${y2} Z`;
   };
 
   let currentAngle = 0;
@@ -58,12 +70,16 @@ export const PieChart = ({ ownershipStats }) => {
     <div className={styles.pieChartContainer}>
       <div className={styles.part}>
         <div className={styles.pieChart}>
-          <svg width="350" height="350" viewBox="0 0 350 350">
+          <svg 
+            width="100%" 
+            height="100%" 
+            viewBox={`0 0 ${isSmallScreen ? 200 : 350} ${isSmallScreen ? 200 : 350}`}
+          >
             {!hasCompanies ? (
               <circle
-                cx="175"
-                cy="175"
-                r="174.5"
+                cx={center}
+                cy={center}
+                r={radius - 0.5}
                 fill="none"
                 stroke="black"
                 strokeWidth="1"

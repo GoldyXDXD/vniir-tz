@@ -1,14 +1,18 @@
 a.card {
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
   text-decoration: none;
   color: #161617;
 }
 
 .info {
+  flex: 1;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -56,12 +60,12 @@ h4.name {
   gap: 15px;
   align-items: flex-end;
   justify-content: flex-start;
-  height: 100%;
 }
 
 .idItems {
   display: flex;
-  gap: 30px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .idItem {
@@ -79,6 +83,7 @@ h4.name {
 .salary {
   display: flex;
   align-items: center;
+  width: max-content;
   gap: 20px;
   height: 27px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
@@ -98,4 +103,28 @@ h4.name {
   justify-content: center;
   border-radius: 18px;
   width: min-content;
+}
+
+@media (max-width: 976px) {
+  a.card {
+    flex-direction: column; 
+  }
+  .ids {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+
+  
+  .idItems {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .idItem {
+    flex: 1;
+    min-width: 130px;
+  }
 }
