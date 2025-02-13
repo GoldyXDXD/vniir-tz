@@ -1,0 +1,44 @@
+.pieChartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+  width: calc(100% - 60px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.pieChart {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.part {
+  width: 50%;
+  display: flex;
+  
+  justify-content: center;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+} 

@@ -1,0 +1,125 @@
+{
+    "column_names": {
+        "company_id": "id компании",
+        "company_name": "Наименование компании",
+        "employees_count": "Количество сотрудников, шт.",
+        "authorized_capital": "Уставной капитал, руб.",
+        "average_salary": "Средняя заработная плата, руб.",
+        "region": "Регион",
+        "ownership_type": "Тип собственности",
+        "inn": "ИНН",
+        "ogrn": "ОГРН"
+    },
+    "companies": [
+        {
+            "company_id": 1,
+            "company_name": "Организация №1",
+            "employees_count": 10,
+            "authorized_capital": 10000,
+            "average_salary": 56000,
+            "region": "Московская область",
+            "ownership_type": "Частная",
+            "inn": 7717005260,
+            "ogrn": 1077746949576
+        },
+        {
+            "company_id": 2,
+            "company_name": "Организация №2",
+            "employees_count": 20,
+            "authorized_capital": 20000,
+            "average_salary": 78000,
+            "region": "Московская область",
+            "ownership_type": "Государственная",
+            "inn": 7713057355,
+            "ogrn": 1087746407374
+        },
+        {
+            "company_id": 3,
+            "company_name": "Организация №3",
+            "employees_count": 30,
+            "authorized_capital": 10000,
+            "average_salary": 13000,
+            "region": "Краснодарский край",
+            "ownership_type": "Муниципальная",
+            "inn": 7702458130,
+            "ogrn": 1117746474735
+        },
+        {
+            "company_id": 4,
+            "company_name": "Организация №4",
+            "employees_count": 40,
+            "authorized_capital": 20000,
+            "average_salary": 45000,
+            "region": "Краснодарский край",
+            "ownership_type": "Частная",
+            "inn": 7704554262,
+            "ogrn": 5077746120282
+        },
+        {
+            "company_id": 5,
+            "company_name": "Организация №5",
+            "employees_count": 50,
+            "authorized_capital": 10000,
+            "average_salary": 87000,
+            "region": "Хабаровский край",
+            "ownership_type": "Государственная",
+            "inn": 7743014447,
+            "ogrn": 1117746272225
+        },
+        {
+            "company_id": 6,
+            "company_name": "Организация №6",
+            "employees_count": 60,
+            "authorized_capital": 20000,
+            "average_salary": 34000,
+            "region": "Хабаровский край",
+            "ownership_type": "Муниципальная",
+            "inn": 7719492594,
+            "ogrn": 1107746589400
+        },
+        {
+            "company_id": 7,
+            "company_name": "Организация №7",
+            "employees_count": 70,
+            "authorized_capital": 10000,
+            "average_salary": 60000,
+            "region": "Смоленская область",
+            "ownership_type": "Частная",
+            "inn": 7728759942,
+            "ogrn": 1027739898450
+        },
+        {
+            "company_id": 8,
+            "company_name": "Организация №8",
+            "employees_count": 80,
+            "authorized_capital": 20000,
+            "average_salary": 56000,
+            "region": "Смоленская область",
+            "ownership_type": "Государственная",
+            "inn": 7627018842,
+            "ogrn": 1067746363365
+        },
+        {
+            "company_id": 9,
+            "company_name": "Организация №9",
+            "employees_count": 100,
+            "authorized_capital": 10000,
+            "average_salary": 37000,
+            "region": "Республика Башкортостан",
+            "ownership_type": "Муниципальная",
+            "inn": 7718183635,
+            "ogrn": 1097760164457
+        },
+        {
+            "company_id": 10,
+            "company_name": "Организация №10",
+            "employees_count": 90,
+            "authorized_capital": 20000,
+            "average_salary": 200000,
+            "region": "Республика Башкортостан",
+            "ownership_type": "Частная",
+            "inn": 7712080785,
+            "ogrn": 1187746299278
+        }
+    ]
+}

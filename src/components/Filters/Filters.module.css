@@ -1,0 +1,126 @@
+.filters {
+  width: 300px;
+  padding: 20px 20px 250px 20px;
+  border-radius: 8px;
+  height: min-content;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.filters input {
+  padding: 12px 15px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+  }
+h2.title {
+
+  
+
+  margin: 0;
+  padding-bottom: 30px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.regionInput {
+  padding: 10px;
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.salaryFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rangeInputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+}
+
+.rangeDash {
+  color: var(--text-gray);
+}
+
+.rangeSliderContainer {
+  padding: 10px 0;
+}
+
+.rangeSlider {
+  width: 100%;
+  height: 2px;
+  background: var(--border-gray);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.rangeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  cursor: pointer;
+}
+
+.rangeSlider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  cursor: pointer;
+  border: none;
+}
+
+.resetButton {
+  padding: 13px;
+  text-align: center;
+  border-radius: 22px;
+  background: #F4F4F4;
+  border: none;
+  color: #6F6F6F;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Добавляем стили для активного состояния ползунка */
+.rangeSlider::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+}
+
+.rangeSlider::-moz-range-thumb:active {
+  transform: scale(1.2);
+}

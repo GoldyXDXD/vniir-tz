@@ -1,0 +1,101 @@
+a.card {
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #161617;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h4.name {
+  height: 27px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.details {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  flex-direction: column;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 27px;
+  
+}
+.amount span {
+  padding-right: 10px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 27px;
+}
+
+.ids {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.idItems {
+  display: flex;
+  gap: 30px;
+}
+
+.idItem {
+  display: flex;
+  gap: 20px;
+  padding: 5px 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+  border-radius: 14px;
+} 
+.idItemBlue {
+  color: #206FE5;
+  font-weight: bold;
+}
+.salary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 27px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 18px;
+}
+
+.type {
+  padding: 5px 15px;
+  color: #206FE5;
+  border: 1px solid #206FE5;
+  font-size: 12px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  width: min-content;
+}

@@ -1,0 +1,59 @@
+.searchSection {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.searchSection input {
+  border-radius: 23px;
+}
+
+.searchSection h3 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 auto;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #C1C2C7;
+  border-radius: 4px;
+  margin: 25px 0;
+}
+
+.resultsHeader {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: #206FE5;
+  font-size: 20px;
+  gap: 15px;
+}
+
+.sortOptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 20px;
+  font-size: 16px;
+  color: #C1C2C7;
+}
+
+.sortOptions span {
+  cursor: pointer;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.companiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

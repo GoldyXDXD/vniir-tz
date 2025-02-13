@@ -1,0 +1,15 @@
+.breadcrumbs {
+    color: rgba(32, 111, 229, 1);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs a {
+    color: rgba(32, 111, 229, 1);
+    text-decoration: none;
+    padding: 15px 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
